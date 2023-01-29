@@ -1,69 +1,203 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# demo
+const colors = [
+				{
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#23D67D' }, { offset: 0.5, color: '#23D67D' }, { offset: 0.5, color: '#0BBE65' }, { offset: 1, color: '#0BBE65' }]
+				},
+				{
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#F0F3F5' }, { offset: 0.5, color: '#F0F3F5' }, { offset: 0.5, color: '#E6E9EB' }, { offset: 1, color: '#E6E9EB' }]
+				},
+ 
+			];
+			const data=[
+{value:10, 
+itemStyle: { normal: { color: {
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#95D611' }, { offset: 0.5, color: '#95D611' }, { offset: 0.5, color: '#68950B' }, { offset: 1, color: '#68950B' }]
+				}, } }
+},
+{value:10, 
+itemStyle: { normal: { color: {
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#2BD6D6' }, { offset: 0.5, color: '#2BD6D6' }, { offset: 0.5, color: '#1B8B8B' }, { offset: 1, color: '#1B8B8B' }]
+				}, } }
+},
+{value:10, 
+itemStyle: { normal: { color: {
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#FAE684' }, { offset: 0.5, color: '#FAE684' }, { offset: 0.5, color: '#AB8F06' }, { offset: 1, color: '#AB8F06' }]
+				}, } }
+},
+];
+			let barWidth = 40;
+			const bottomData = [
+{value:1, 
+itemStyle: { normal: { color: {
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#95D611' }, { offset: 0.5, color: '#95D611' }, { offset: 0.5, color: '#68950B' }, { offset: 1, color: '#68950B' }]
+				}, } }
+},
+{value:1, 
+itemStyle: { normal: { color: {
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#2BD6D6' }, { offset: 0.5, color: '#2BD6D6' }, { offset: 0.5, color: '#1B8B8B' }, { offset: 1, color: '#1B8B8B' }]
+				}, } }
+},
+{value:1, 
+itemStyle: { normal: { color: {
+					type: 'linear',
+					x: 0,
+					x2: 1,
+					y: 0,
+					y2: 0,
+					colorStops: [{ offset: 0, color: '#FAE684' }, { offset: 0.5, color: '#FAE684' }, { offset: 0.5, color: '#AB8F06' }, { offset: 1, color: '#AB8F06' }]
+				}, } }
+},
+];
+			const topdata = [200,200,200];
+			const topdata1 = [190,190,190];
+            option = {
+         tooltip:{show:false},
+				xAxis: [
+					{
+						data: ["周一","周二","周三"],
+						axisTick: { show: false },
+						axisLine: { show: false },
+						// axisLabel: { show: false },
+					
+					}
+				],
+				grid: {
+					top: 30,
+					left: 50,
+					right: 20,
+					bottom: 30
+				},
+				yAxis: {
+				  axisLabel: { show: false },
+					axisLine: { show: false },
+					axisTick: { show: false },
+					splitLine: { show: false }
+				},
+				series: [
+					{
+						z: 1,
+						name: '数据一',
+						type: 'bar',
+						barWidth: barWidth,
+						data: data,
+						stack: 'equal',
+						label: {
+                  show: true, //开启显示
+                  position: 'top', //在上方显示
+                  textStyle: { //数值样式
+                    color :'#000',
+                    fontSize: 14,
+                  },
+                  offset:[0,-2]
+                },
+            emphasis: {disabled:true},
+						itemStyle: { normal: { color: colors[0] } }
+					},
+					{
+						z: 1,
+						name: '数据二',
+						type: 'bar',
+						barWidth: barWidth,
+						data: topdata1,
+						stack: 'equal',
+						label: { show: false },
+						emphasis: {disabled:true},
+						itemStyle: { normal: { color: colors[1] } }
+					},
+					{
+						z: 2,
+						name: '底部',
+						type: 'pictorialBar',
+						symbolPosition: 'end',
+						data: data,
+						symbol: 'diamond',
+						label: { show: false },
+						symbolOffset: [0, '-50%'],
+						symbolSize: [barWidth, 10],
+						emphasis: {disabled:true},
+						itemStyle: { normal: { color: colors[1] } }
+					},
+					{
+						z: 2,
+						name: '底部',
+						type: 'pictorialBar',
+						symbolPosition: 'end',
+						data:topdata,
+						symbol: 'diamond',
+						label: { show: false },
+						symbolOffset: [0, '-50%'],
+						symbolSize: [barWidth, 10],
+						emphasis: {disabled:true},
+						itemStyle: { normal: { color:'#E6E9EB' } }
+					},
+					{
+						z: 2,
+						name: '底部',
+						type: 'pictorialBar',
+						symbolPosition: 'end',
+						data:[
+{value:10, 
+itemStyle: { normal: { color: '#CAEA88', } }
+},
+{value:10, 
+itemStyle: { normal: { color: '#95EAEA', } }
+},
+{value:10, 
+itemStyle: { normal: { color: '#FAE684', } }
+},
+],
+						symbol: 'diamond',
+						label: { show: false },
+						symbolOffset: [0, '-50%'],
+						symbolSize: [barWidth, 10],
+						emphasis: {disabled:true},
+						itemStyle: { normal: { color:'#23D67D' } }
+					},
+					{
+						z: 2,
+						name: '底部',
+						type: 'pictorialBar',
+						data: bottomData,
+						symbol: 'diamond',
+						label: { show: false },
+						symbolOffset: [0, '50%'],
+						symbolSize: [barWidth, 10],
+						emphasis: {disabled:true},
+						itemStyle: { normal: { color: colors[0] } }
+					},
+				]
+};
